@@ -1,0 +1,22 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Input Form</title>
+</head>
+
+<body>
+    <form:form action="processForm" modelAttribute="student">
+        First name: <form:input type="text" path="firstName"
+            placeholder="What's your first name?" />
+        <br><br>
+        Last name: <form:input type="text" path="lastName"
+            placeholder="What's your first name?" />        
+        <input type="submit" />
+    <!-- Background call to student.setFirstname / .setLastname -->    
+    </form:form>
+    
+</body>
+
+</html>

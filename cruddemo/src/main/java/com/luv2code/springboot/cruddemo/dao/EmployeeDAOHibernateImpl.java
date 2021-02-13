@@ -1,0 +1,69 @@
+package com.luv2code.springboot.cruddemo.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import org.hibernate.Session;
+import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.luv2code.springboot.cruddemo.entity.Employee;
+
+@Repository
+public class EmployeeDAOHibernateImpl implements EmployeeDAO {
+	
+	// define the field for EntityManager
+	private EntityManager entityManager;
+	
+	// set up constructor injection
+	@Autowired
+	public EmployeeDAOHibernateImpl (EntityManager springBootEntityManager) {
+		entityManager = springBootEntityManager;
+	}
+
+	@Override
+	public List<Employee> findAll() {
+		
+		// get the current Hibernate session
+		Session currentSession = entityManager.unwrap(Session.class);
+		
+		// create a query using native Hibernate API
+		// (import Query from org.hibernate.query.Query)
+		Query<Employee> theQuery =
+				currentSession.createQuery("from Employee", Employee.class);
+		
+		//execute the query & return the result
+		List<Employee> employees = theQuery.getResultList();
+		return employees;
+	}
+
+	@Override
+	public Employee findById(int theId) {
+		// get the current Hibernate session
+		Session currentSession = entityManager.unwrap(Session.class);
+		// get Employee by ID and return
+		return currentSession.get(Employee.class, theId);
+	}
+
+	@Override
+	public void save(Employee theEmployee) {
+		// get the current Hibernate session
+		Session currentSession = entityManager.unwrap(Session.class);
+		// saveOrUpdate method: if id=0, insert new; if id !=0, update
+		currentSession.saveOrUpdate(theEmployee);
+	}
+
+	@Override
+	public void deleteById(int theId) {
+		// get the current Hibernate session
+		Session currentSession = entityManager.unwrap(Session.class);
+		// build query using parameter employeeId and execute
+		Query theQuery = currentSession.createQuery(
+				"delete from Employee where id=:employeeId");
+		theQuery.setParameter("employeeId", theId);
+		theQuery.executeUpdate();		
+	}
+
+}

@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+/home/sea1/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3246518651.index
+/spring-mvc-demo/src
+/home/sea1/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3519421886.index
+/mycoolwebapp/src/main/resources

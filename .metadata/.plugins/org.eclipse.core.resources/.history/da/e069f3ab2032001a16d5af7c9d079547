@@ -1,0 +1,15 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Confirmation</title>
+</head>
+
+<body>
+<!-- Background call to student.getFirstname / .getLastname -->
+The student is confirmed: ${student.firstname} ${student.lastname} 
+    
+</body>
+
+</html>

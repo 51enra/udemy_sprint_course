@@ -1,0 +1,17 @@
+127.0.0.1 - - [09/Jan/2020:08:29:07 +0100] "GET / HTTP/1.1" 404 720
+127.0.0.1 - - [09/Jan/2020:08:29:07 +0100] "GET /spring-mvc-demo/ HTTP/1.1" 200 212
+127.0.0.1 - - [09/Jan/2020:08:29:11 +0100] "GET /spring-mvc-demo/student/showForm HTTP/1.1" 200 1588
+127.0.0.1 - - [09/Jan/2020:08:29:17 +0100] "POST /spring-mvc-demo/student/processForm HTTP/1.1" 200 322
+127.0.0.1 - - [09/Jan/2020:08:57:05 +0100] "GET /spring-mvc-demo/student/showForm HTTP/1.1" 200 2120
+127.0.0.1 - - [09/Jan/2020:08:57:12 +0100] "POST /spring-mvc-demo/student/processForm HTTP/1.1" 500 3577
+127.0.0.1 - - [09/Jan/2020:08:58:09 +0100] "POST /spring-mvc-demo/student/processForm HTTP/1.1" 500 4939
+127.0.0.1 - - [09/Jan/2020:08:59:58 +0100] "POST /spring-mvc-demo/student/processForm HTTP/1.1" 200 370
+127.0.0.1 - - [09/Jan/2020:09:00:13 +0100] "GET /spring-mvc-demo/student/showForm HTTP/1.1" 200 2129
+127.0.0.1 - - [09/Jan/2020:09:00:21 +0100] "POST /spring-mvc-demo/student/processForm HTTP/1.1" 200 435
+127.0.0.1 - - [09/Jan/2020:11:58:51 +0100] "GET / HTTP/1.1" 404 720
+127.0.0.1 - - [09/Jan/2020:11:58:52 +0100] "GET /mycoolwebapp/ HTTP/1.1" 200 72
+127.0.0.1 - - [09/Jan/2020:14:03:10 +0100] "GET /mycoolwebapp/ HTTP/1.1" 200 72
+127.0.0.1 - - [09/Jan/2020:14:03:18 +0100] "GET /mycoolwebapp/ HTTP/1.1" 200 72
+127.0.0.1 - - [09/Jan/2020:14:03:20 +0100] "GET /mycoolwebapp/ HTTP/1.1" 200 72
+127.0.0.1 - - [09/Jan/2020:14:03:20 +0100] "GET /mycoolwebapp/ HTTP/1.1" 200 72
+127.0.0.1 - - [09/Jan/2020:14:03:28 +0100] "GET /mycoolwebapp/index.jsp HTTP/1.1" 200 72
